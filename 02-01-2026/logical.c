@@ -6,7 +6,6 @@ int main(){
   // Logical AND (&&)
   // Logical OR (||)
   // Logical NOT (!)
-  
 
   bool a = false;
   bool b = true;
