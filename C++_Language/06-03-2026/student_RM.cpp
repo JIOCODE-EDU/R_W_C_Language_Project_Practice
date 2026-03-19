@@ -13,7 +13,7 @@ private:
 public:
   Student()
   {
-    name = new char[1];
+    name = new char[20];
     name[0] = '\0';
     roll = 0;
     gpa = 0.0;
@@ -36,21 +36,24 @@ public:
     name = new char[strlen(s.name) + 1];
     strcpy(name, s.name);
 
-    cout << "copy constructor called for roll :" << roll << endl;
+    cout << "copy constructor called for roll :" << name << endl;
   }
 
-  Student& operator=(const Student& s)
-  {
-    if (this != &s)
-    {
-      delete[] name;
-      roll = s.roll;
-      gpa = s.gpa;
-      name = new char[strlen(s.name) + 1];
-      strcpy(name, s.name);
-    }
-    return *this;
-  }
+  // Student& operator=(const Student& s)
+  // {
+  //   if (this != &s)
+  //   {
+  //     delete[] name;
+  //     roll = s.roll;
+  //     gpa = s.gpa;
+  //     name = new char[strlen(s.name) + 1];
+  //     strcpy(name, s.name);
+  //     cout << "print of name in assignment operator :" << s.name << endl;
+  //   }
+  //   return *this;
+  // }
+
+  // destuctor
 
   ~Student()
   {
