@@ -1,0 +1,137 @@
+/* Logical selector */
+
+/* div:not(.box){
+		border: 1px solid red;
+		height: 100px;
+		width: 100px;
+		background-color: blue;
+}
+
+div:where(.box){
+		border: 1px solid red;
+		height: 200px;
+		width: 200px;
+		background-color: blue;
+}
+
+:is(h1 , h2 , h3){
+	color:blue;
+}
+
+div :is(h1 , .span){
+	color:red;
+} */
+
+div:has(p){
+	border:2px solid red;
+}
+
+form:has(input:valid){
+	border:2px solid green;
+}
+form:has(input:invalid){
+	border:2px solid red;
+}
+
+/* a[href]{
+	background-color: red;
+}
+
+a[href="https://www.facebook.com  goole"]{
+	background-color: green;
+} */
+
+/* a[href~="box"]{
+	background-color: purple;
+} */
+
+/* a[href|="box"]{
+	background-color: purple;
+} */
+
+/* a[href^="b"]{
+	background-color: yellow;
+} */
+
+/* a[href$="x"]{
+	background-color: yellow;
+} */
+
+/* a[href*="x"]{
+	background-color: yellow;
+} */
+
+/* Link Selector */
+
+/*
+
+:link
+:active
+:hover
+:visited
+
+*/
+
+a:link{
+	background-color: black;
+}
+
+a:active{
+	background-color: green;
+}
+
+a:hover{
+	background-color: orange;
+}
+
+a:visited{
+	background-color: gray;
+}
+
+/* Pesudo Element Selector */
+
+/*
+
+::after
+::before
+::first-letter
+::first-line
+::selection
+::placeholder
+::marker
+
+*/
+
+div::after{
+	content: "🚑";
+}
+
+div::before{
+	content: "🚑";
+}
+
+p::selection{
+	background: yellow;
+}
+
+p::first-line{
+	font-size: 30px;
+}
+
+p::first-letter{
+	font-size: 50px;
+}
+
+
+input::placeholder{
+	color:blue
+}
+
+li::marker{
+	color:orange
+}
+
+
+
+
+
