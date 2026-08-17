@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  
+  <!-- Quiz Application -->
+  
+  <div id="quiz_start">
+    <button id="start_btn">Start Quiz</button>
+  </div>
+  
+  <div class="quiz-wrapper">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h1 class="quiz-title">Javascript Quiz Application</h1>
+        <div class="progress-bar-container">
+          <div class="quiz-progress"></div>
+          <div class="timer" id="timer"></div>
+        </div>
+      </div>
+      <div class="quiz-body" id="quizBody">
+      </div>
+      <div class="quiz-footer" id="quizFooter">
+        <div class="question-counter" id="questionCounter"></div>
+        <button onclick="nextQuestion()" id="nextBtn" disabled>Next Question</button>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="results-container" id="resultsContainer">
+    <h2 id="resultHeading">Quiz Complete!</h2>
+    
+    <div class="results-score" id="finalScore">0%</div>
+    <div class="results-message" id="resultsMessage">Great effort!</div>
+    
+    <div class="results-details">
+      <div class="result-row">
+        <span class="result-label">Correct Answers:</span>
+        <span class="result-value" id="correctCount">0</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Incorrect Answers:</span>
+        <span class="result-value" id="incorrectCount">0</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Total Questions:</span>
+        <span class="result-value" id="totalQuestions">5</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Time Taken:</span>
+        <span class="result-value" id="timeTaken">0:00</span>
+      </div>
+    </div>
+
+    <button class="btn-restart" id="restartBtn">
+      Restart Quiz
+    </button>
+  </div>
+  
+  
+  
+  
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+
+</html>
