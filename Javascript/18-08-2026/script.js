@@ -137,9 +137,6 @@ let timerInterval;
 let startTime;
 let selectedAnswer = null;
 
-
-
-
 // // DOM
 
 const start_btn = document.getElementById("start_btn");
