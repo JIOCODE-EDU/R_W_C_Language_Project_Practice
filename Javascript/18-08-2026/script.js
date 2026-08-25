@@ -130,7 +130,7 @@ const quizData = [
 
 // initial variables
 
-let currentQuestion = 19;
+let currentQuestion = 18;
 let score = 0;
 let timeRemaining = (60 * quizData.length) / 2; // 10 minute
 let timerInterval;
@@ -158,9 +158,6 @@ const initQuiz = () => {
   let timeRemaining = (60 * quizData.length) / 2; // 10 minute
   let startTime = Date.now();
   let selectedAnswer = null;
-
-  console.log(currentQuestion);
-  
 
   startTimer();
 
@@ -240,6 +237,8 @@ const selectAnswer = (e) => {
 };
 
 const nextQuestion = () => {
+
+  console.log(selectedAnswer);
 
   if (selectedAnswer === null) return;
 
