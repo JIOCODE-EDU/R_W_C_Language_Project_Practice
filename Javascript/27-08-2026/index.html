@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>JSON Store Data in LocalStorage</h1>
+    <h2>1. Create / Store JSON Data</h2>
+
+    <div>
+      <input type="number" name="" id="id" placeholder="Enter ID">
+      <input type="text" name="" id="name" placeholder="Enter Name">
+      <input type="number" name="" id="age" placeholder="Enter Age">
+      <br>
+
+      <button class="save" onclick="saveData()">Save Data</button>
+      <button class="view" onclick="viewData()">View Data</button>
+      <button class="delete" onclick="deleteData()">Delete Data</button>
+      <button class="clear" onclick="clearAll()">Delete All</button>
+    </div>
+    
+    <br>
+
+    <h2>Update JSON Data</h2>
+
+    <input type="number" name="" id="updateId">
+      <input type="text" name="" id="updateName" placeholder="Enter New Name">
+      <input type="number" name="" id="updateAge" placeholder="Enter New Age">
+    <button class="update" onclick="updateData()">Update Data</button>
+    
+    <h2>Output Field</h2>
+    
+    <div id="output">
+      No data available
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
