@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <!-- <div id="header"></div> -->
+  <h1>Home Page</h1>
+  <button onclick="getData()">Get Data</button>
+  <div id="result"></div>
+  <div id="footer"></div>
+  <script>
+    // fetch('./components/header.html').then(response => {
+    //   return response.text()
+    // }).then(data => {
+    //   document.getElementById('header').innerHTML = data
+    // })
+    //     fetch('./components/footer.html').then(response => {
+    //   return response.text()
+    // }).then(data => {
+    //   document.getElementById('footer').innerHTML = data
+    // })
+
+
+
+    // AJAX : Asyncronous Javascript And XML
+    // API : Application Programming Interface
+
+    // const getData = () => {
+    //   var xhttp = new XMLHttpRequest();
+
+    //   xhttp.open("GET" , "data.txt" , true)
+
+    //   xhttp.send()
+
+    //   xhttp.onload = function(){
+    //     document.getElementById("result").innerHTML = xhttp.responseText;
+    //   }
+    // }
+
+
+    const getData = () => {
+      fetch("https://dummyjson.com/products").then((response) => {
+        return response.json()
+      }).then((data) => {
+        console.log(data);
+        
+      })
+    }
+
+
+
+    // fetch
+    // get , post , put , delete
+    // CRUD Operation 
+    // C : Create , R : Read , U : Update , D : Delete
+  </script>
+  <script type="module" src="./js/home.js"></script>
+  <script type="module" src="./js/helper.js"></script>
+</body>
+
+</html>
