@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div id="header"></div>
+  <main class="max-w-6xl mx-auto px-4 py-8 spacy-8">
+    <section class="bg-white rounded-lg border-slate-200 p-6">
+      <h2 class="font-disply text-lg font-semibold mb-4">Add a new product</h2>
+      <form id="productForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <input type="text" name="" id="productName" placeholder="Product Name" class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand">
+        <input type="number" name="" id="productPrice" placeholder="Product Price" class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand">
+        <select id="productCategory" class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand">
+          <option value="">Select category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home">Home</option>
+          <option value="General">General</option>
+        </select>
+        <input type="text" name="" id="productImage" placeholder="Image URL" class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand">
+        <button type="submit" class="sm:col-span-2 lg:col-span-4 bg-blue-500 hover:bg-brand-dark text-white font-medium py-2 transition-colors">Add Product</button>
+      </form>
+    </section>
+
+    <!-- Filter and Sort-->
+    <section class="flex flex-col sm:flex-row gap-3 p-6">
+      <input type="text" name="" id="searchInput" placeholder="Search product by name...." class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand w-full">
+      <select name="" id="sortSelect" class="border border-slate-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-brand">
+        <option value="">Sort by</option>
+        <option value="lowtohigh">Price: Low to High</option>
+        <option value="hightolow">Price: High to Low</option>
+      </select>
+    </section>
+
+    <section id="productList" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script>
+    fetch('./components/header.html').then(response => {
+      return response.text()
+    }).then(data => {
+      document.getElementById('header').innerHTML = data
+    })
+    fetch('./components/footer.html').then(response => {
+      return response.text()
+    }).then(data => {
+      document.getElementById('footer').innerHTML = data
+    })
+  </script>
+  <script type="module" src="./js/home.js"></script>
+  <script type="module" src="./js/helper.js"></script>
+</body>
+
+</html>
